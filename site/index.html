@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Figma to Code — A Designer's Path</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-bg"></div>
+  <div class="header-grid-lines"></div>
+  <div class="header-content">
+    <span class="eyebrow">Designer's Learning Path</span>
+    <h1 class="header-title">From <em>Figma</em><br>to Fluent Code</h1>
+    <p class="header-subtitle">A structured path for visual designers to understand modern HTML semantics and CSS architecture — using the mental models you already have.</p>
+    <div class="header-stats">
+      <div class="stat">
+        <span class="stat-number">5</span>
+        <span class="stat-label">Phases</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">3–6</span>
+        <span class="stat-label">Months</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">20+</span>
+        <span class="stat-label">Core Topics</span>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</header>
+
+<!-- PHILOSOPHY -->
+<section style="background: var(--paper);">
+  <div class="main-content">
+    <div class="philosophy">
+      <div class="philosophy-label">The Core Idea</div>
+      <div class="philosophy-body">
+        <h2>You already think in the right abstractions.</h2>
+        <p>Figma trains you to think about structure, hierarchy, constraints, components, variables, and states. These aren't Figma concepts — they're universal design concepts that HTML and CSS have their own answers to.</p>
+        <p>This path doesn't ask you to forget what you know. It asks you to recognise the translations: Auto Layout → Flexbox & Grid, Variables → Custom Properties, Components → Web Components or BEM classes, Constraints → CSS Box Model.</p>
+
+        <div class="translation-pairs">
+          <div class="pair-header figma">Figma Concept</div>
+          <div class="pair-header code">CSS / HTML Answer</div>
+
+          <div class="pair-row">
+            <div class="pair-cell">Auto Layout (horizontal)</div>
+            <div class="pair-cell code-cell">display: flex</div>
+          </div>
+          <div class="pair-row">
+            <div class="pair-cell">Auto Layout (grid mode)</div>
+            <div class="pair-cell code-cell">display: grid</div>
+          </div>
+          <div class="pair-row">
+            <div class="pair-cell">Fill / Hug / Fixed sizing</div>
+            <div class="pair-cell code-cell">flex-grow, min-content, fixed width</div>
+          </div>
+          <div class="pair-row">
+            <div class="pair-cell">Variables (primitives)</div>
+            <div class="pair-cell code-cell">CSS Custom Properties (--color-blue-500)</div>
+          </div>
+          <div class="pair-row">
+            <div class="pair-cell">Variables (semantic)</div>
+            <div class="pair-cell code-cell">CSS Custom Properties (--color-text-primary)</div>
+          </div>
+          <div class="pair-row">
+            <div class="pair-cell">Component variants</div>
+            <div class="pair-cell code-cell">BEM modifiers / data attributes</div>
+          </div>
+          <div class="pair-row">
+            <div class="pair-cell">Clipping / masks</div>
+            <div class="pair-cell code-cell">overflow: hidden, clip-path</div>
+          </div>
+          <div class="pair-row">
+            <div class="pair-cell">Blend modes</div>
+            <div class="pair-cell code-cell">mix-blend-mode</div>
+          </div>
+          <div class="pair-row">
+            <div class="pair-cell">Interactive states (hover)</div>
+            <div class="pair-cell code-cell">:hover, :focus-visible pseudo-classes</div>
+          </div>
+          <div class="pair-row">
+            <div class="pair-cell">Responsive breakpoints</div>
+            <div class="pair-cell code-cell">@media, @container queries</div>
+          </div>
+          <div class="pair-row">
+            <div class="pair-cell">Frames & Groups</div>
+            <div class="pair-cell code-cell">Semantic HTML elements (section, article, nav)</div>
+          </div>
+          <div class="pair-row">
+            <div class="pair-cell">Layer order (z-index concept)</div>
+            <div class="pair-cell code-cell">z-index, stacking contexts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHASES -->
+<section style="background: var(--paper);">
+  <div class="main-content">
+    <div class="phases-section">
+      <div class="phases-header">
+        <h2>The Five Phases</h2>
+        <span class="section-count">01 → 05</span>
+      </div>
+
+      <!-- PHASE 1 -->
+      <div class="phase phase-color-1">
+        <div class="phase-meta">
+          <span class="phase-number">01</span>
+          <h3 class="phase-title">Foundations of the Web Medium</h3>
+          <span class="phase-duration">Weeks 1–3</span>
+        </div>
+        <div class="phase-content">
+          <p class="phase-intro">Before touching CSS, understand what HTML actually is — a system for describing the meaning and structure of information. Semantic HTML isn't just good practice, it's the backbone of accessibility, SEO, and maintainable stylesheets.</p>
+
+          <div class="topics-grid">
+            <div class="topic-card">
+              <span class="topic-tag">HTML</span>
+              <h4>Semantic Elements</h4>
+              <p>Learn when to use <code style="font-family: var(--font-mono); font-size: 0.8em;">article</code>, <code style="font-family: var(--font-mono); font-size: 0.8em;">section</code>, <code style="font-family: var(--font-mono); font-size: 0.8em;">nav</code>, <code style="font-family: var(--font-mono); font-size: 0.8em;">header</code>, <code style="font-family: var(--font-mono); font-size: 0.8em;">aside</code> and why divs alone produce fragile code.</p>
+              <span class="topic-figma-bridge">≈ Figma Frames with named layers</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">HTML</span>
+              <h4>Heading Hierarchy</h4>
+              <p>Headings (h1–h6) create a document outline used by screen readers and search engines. They're about document structure, not visual size.</p>
+              <span class="topic-figma-bridge">≈ Type styles & hierarchy</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">HTML</span>
+              <h4>Forms & Interactive Elements</h4>
+              <p>Input types, labels, fieldsets, and ARIA attributes. Understanding this unlocks native browser accessibility for free.</p>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">CSS</span>
+              <h4>The Cascade & Specificity</h4>
+              <p>How CSS decides which rule wins when multiple rules apply. This is the single most important concept for writing maintainable stylesheets.</p>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">CSS</span>
+              <h4>The Box Model</h4>
+              <p>Every element is a box: content, padding, border, margin. Understanding this prevents countless layout bugs.</p>
+              <span class="topic-figma-bridge">≈ Padding settings in Auto Layout</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">CSS</span>
+              <h4>CSS Custom Properties</h4>
+              <p>Define and use CSS variables (<code style="font-family: var(--font-mono); font-size: 0.8em;">--token-name: value</code>) for a maintainable token system that matches your Figma Variables structure.</p>
+              <span class="topic-figma-bridge">≈ Figma Variables</span>
+            </div>
+          </div>
+
+          <div class="code-example">
+            <div class="code-bar">
+              <div class="code-dots"><span></span><span></span><span></span></div>
+              <span class="code-filename">semantic-layout.html</span>
+            </div>
+            <pre><code><span class="code-comment">&lt;!-- Instead of: &lt;div class="wrapper"&gt; --&gt;</span>
+
+<span class="code-tag">&lt;main</span> <span class="code-attr">class</span><span class="code-punctuation">="</span><span class="code-string">page-content</span><span class="code-punctuation">"</span><span class="code-tag">&gt;</span>
+  <span class="code-tag">&lt;article</span> <span class="code-attr">class</span><span class="code-punctuation">="</span><span class="code-string">case-study</span><span class="code-punctuation">"</span><span class="code-tag">&gt;</span>
+    <span class="code-tag">&lt;header</span> <span class="code-attr">class</span><span class="code-punctuation">="</span><span class="code-string">case-study__header</span><span class="code-punctuation">"</span><span class="code-tag">&gt;</span>
+      <span class="code-tag">&lt;h1&gt;</span>Project Title<span class="code-tag">&lt;/h1&gt;</span>
+      <span class="code-tag">&lt;p</span> <span class="code-attr">class</span><span class="code-punctuation">="</span><span class="code-string">case-study__meta</span><span class="code-punctuation">"</span><span class="code-tag">&gt;</span>UX Design · 2024<span class="code-tag">&lt;/p&gt;</span>
+    <span class="code-tag">&lt;/header&gt;</span>
+    <span class="code-tag">&lt;section</span> <span class="code-attr">class</span><span class="code-punctuation">="</span><span class="code-string">case-study__body</span><span class="code-punctuation">"</span><span class="code-tag">&gt;</span>
+      <span class="code-comment">&lt;!-- Content sections go here --&gt;</span>
+    <span class="code-tag">&lt;/section&gt;</span>
+  <span class="code-tag">&lt;/article&gt;</span>
+<span class="code-tag">&lt;/main&gt;</span></code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 2 -->
+      <div class="phase phase-color-2">
+        <div class="phase-meta">
+          <span class="phase-number">02</span>
+          <h3 class="phase-title">Layout — The Designer's Domain</h3>
+          <span class="phase-duration">Weeks 4–7</span>
+        </div>
+        <div class="phase-content">
+          <p class="phase-intro">Layout in CSS has been completely transformed. Flexbox and Grid are what Figma's Auto Layout was inspired by. Learn these deeply — they're the single highest-leverage skill for designers coming from Figma.</p>
+
+          <div class="topics-grid">
+            <div class="topic-card">
+              <span class="topic-tag">Layout</span>
+              <h4>Flexbox — One Axis</h4>
+              <p>Aligning and distributing items along a single axis. The direct equivalent of Figma Auto Layout horizontal and vertical modes.</p>
+              <span class="topic-figma-bridge">≈ Auto Layout</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Layout</span>
+              <h4>CSS Grid — Two Axes</h4>
+              <p>Place items in two dimensions simultaneously. Grid is more powerful than anything in Figma for complex, structured layouts.</p>
+              <span class="topic-figma-bridge">≈ Grid layout + constraints</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Layout</span>
+              <h4>Intrinsic Sizing</h4>
+              <p>Using <code style="font-family: var(--font-mono); font-size: 0.8em;">min-content</code>, <code style="font-family: var(--font-mono); font-size: 0.8em;">max-content</code>, <code style="font-family: var(--font-mono); font-size: 0.8em;">fit-content</code>, and <code style="font-family: var(--font-mono); font-size: 0.8em;">clamp()</code> for fluid layouts that adapt without breakpoints.</p>
+              <span class="topic-figma-bridge">≈ Hug / Fill sizing modes</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Layout</span>
+              <h4>Positioning & Stacking</h4>
+              <p><code style="font-family: var(--font-mono); font-size: 0.8em;">relative</code>, <code style="font-family: var(--font-mono); font-size: 0.8em;">absolute</code>, <code style="font-family: var(--font-mono); font-size: 0.8em;">sticky</code>, <code style="font-family: var(--font-mono); font-size: 0.8em;">fixed</code> positioning, and how z-index creates stacking contexts.</p>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Responsive</span>
+              <h4>Media Queries & Breakpoints</h4>
+              <p>Writing adaptive styles using <code style="font-family: var(--font-mono); font-size: 0.8em;">@media</code>. Mobile-first vs desktop-first strategies and when to use each.</p>
+              <span class="topic-figma-bridge">≈ Figma responsive frames</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Responsive</span>
+              <h4>Container Queries</h4>
+              <p>The modern alternative to media queries — style components based on their container size, not the viewport. Perfect for truly reusable components.</p>
+              <span class="topic-figma-bridge">≈ Component-level responsive design</span>
+            </div>
+          </div>
+
+          <div class="code-example">
+            <div class="code-bar">
+              <div class="code-dots"><span></span><span></span><span></span></div>
+              <span class="code-filename">layout.css</span>
+            </div>
+            <pre><code><span class="code-comment">/* Figma Auto Layout → CSS Grid */</span>
+<span class="code-selector">.project-grid</span> <span class="code-punctuation">{</span>
+  <span class="code-property">display</span><span class="code-punctuation">:</span> <span class="code-value">grid</span><span class="code-punctuation">;</span>
+  <span class="code-property">grid-template-columns</span><span class="code-punctuation">:</span> <span class="code-value">repeat(auto-fill, minmax(280px, 1fr))</span><span class="code-punctuation">;</span>
+  <span class="code-property">gap</span><span class="code-punctuation">:</span> <span class="code-token-name">var(--space-6)</span><span class="code-punctuation">;</span>
+<span class="code-punctuation">}</span>
+
+<span class="code-comment">/* Container Query — style based on component size */</span>
+<span class="code-selector">.card</span> <span class="code-punctuation">{</span>
+  <span class="code-property">container-type</span><span class="code-punctuation">:</span> <span class="code-value">inline-size</span><span class="code-punctuation">;</span>
+<span class="code-punctuation">}</span>
+
+<span class="code-at-rule">@container</span> <span class="code-value">(min-width: 400px)</span> <span class="code-punctuation">{</span>
+  <span class="code-selector">.card__layout</span> <span class="code-punctuation">{</span>
+    <span class="code-property">display</span><span class="code-punctuation">:</span> <span class="code-value">flex</span><span class="code-punctuation">;</span>
+    <span class="code-property">flex-direction</span><span class="code-punctuation">:</span> <span class="code-value">row</span><span class="code-punctuation">;</span>
+  <span class="code-punctuation">}</span>
+<span class="code-punctuation">}</span></code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 3 -->
+      <div class="phase phase-color-3">
+        <div class="phase-meta">
+          <span class="phase-number">03</span>
+          <h3 class="phase-title">Design Tokens & CSS Architecture</h3>
+          <span class="phase-duration">Weeks 8–11</span>
+        </div>
+        <div class="phase-content">
+          <p class="phase-intro">This is where your Figma Variables knowledge becomes a superpower. Learn how to architect a scalable token system in CSS — primitives to semantic tokens — and how to structure stylesheets using Cascade Layers to prevent specificity battles.</p>
+
+          <div class="topics-grid">
+            <div class="topic-card">
+              <span class="topic-tag">Tokens</span>
+              <h4>Three-Tier Token System</h4>
+              <p>Primitive tokens (raw values) → Semantic tokens (purpose-named) → Component tokens. This mirrors exactly how Figma Variables work at scale.</p>
+              <span class="topic-figma-bridge">≈ Figma Variable collections</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Tokens</span>
+              <h4>CSS Custom Properties Deep Dive</h4>
+              <p>Scope, inheritance, fallbacks, and dynamic theming. How to build light/dark mode that's driven by a single attribute change on the root element.</p>
+              <span class="topic-figma-bridge">≈ Figma Variable modes</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Architecture</span>
+              <h4>CSS Cascade Layers</h4>
+              <p>Using <code style="font-family: var(--font-mono); font-size: 0.8em;">@layer</code> to create an explicit specificity order: reset → tokens → base → components → utilities.</p>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Architecture</span>
+              <h4>BEM Naming Convention</h4>
+              <p>Block-Element-Modifier: a naming system that creates self-documenting, component-scoped CSS classes. Pairs perfectly with design tokens.</p>
+              <span class="topic-figma-bridge">≈ Component / Variant naming in Figma</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Typography</span>
+              <h4>Fluid Typography with clamp()</h4>
+              <p>Typography that scales smoothly between viewport sizes using a single declaration — no brittle breakpoints needed.</p>
+              <span class="topic-figma-bridge">≈ Variable fonts in Figma</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Theming</span>
+              <h4>Light / Dark Mode Architecture</h4>
+              <p>Using <code style="font-family: var(--font-mono); font-size: 0.8em;">@media (prefers-color-scheme)</code> and data attributes to build a robust theming system that ties back to your token layers.</p>
+              <span class="topic-figma-bridge">≈ Figma Variable modes (Light / Dark)</span>
+            </div>
+          </div>
+
+          <div class="code-example">
+            <div class="code-bar">
+              <div class="code-dots"><span></span><span></span><span></span></div>
+              <span class="code-filename">tokens.css</span>
+            </div>
+            <pre><code><span class="code-at-rule">@layer</span> <span class="code-value">tokens</span> <span class="code-punctuation">{</span>
+  <span class="code-comment">/* — Primitive tokens (static at build time) — */</span>
+  <span class="code-selector">:root</span> <span class="code-punctuation">{</span>
+    <span class="code-token-name">--color-blue-500</span><span class="code-punctuation">:</span> <span class="code-value">#2f6bc8</span><span class="code-punctuation">;</span>
+    <span class="code-token-name">--color-red-500</span><span class="code-punctuation">:</span>  <span class="code-value">#c84b2f</span><span class="code-punctuation">;</span>
+    <span class="code-token-name">--space-4</span><span class="code-punctuation">:</span>        <span class="code-value">1rem</span><span class="code-punctuation">;</span>
+  <span class="code-punctuation">}</span>
+
+  <span class="code-comment">/* — Semantic tokens (switch per theme) — */</span>
+  <span class="code-selector">:root</span><span class="code-punctuation">,</span> <span class="code-selector">[data-theme="light"]</span> <span class="code-punctuation">{</span>
+    <span class="code-token-name">--color-text-primary</span><span class="code-punctuation">:</span>      <span class="code-value">#0d0d0d</span><span class="code-punctuation">;</span>
+    <span class="code-token-name">--color-background-page</span><span class="code-punctuation">:</span>   <span class="code-value">#f5f0e8</span><span class="code-punctuation">;</span>
+    <span class="code-token-name">--color-action-primary</span><span class="code-punctuation">:</span>    <span class="code-token-name">var(--color-blue-500)</span><span class="code-punctuation">;</span>
+  <span class="code-punctuation">}</span>
+
+  <span class="code-selector">[data-theme="dark"]</span> <span class="code-punctuation">{</span>
+    <span class="code-token-name">--color-text-primary</span><span class="code-punctuation">:</span>      <span class="code-value">#f5f0e8</span><span class="code-punctuation">;</span>
+    <span class="code-token-name">--color-background-page</span><span class="code-punctuation">:</span>   <span class="code-value">#0d0d0d</span><span class="code-punctuation">;</span>
+  <span class="code-punctuation">}</span>
+<span class="code-punctuation">}</span></code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 4 -->
+      <div class="phase phase-color-4">
+        <div class="phase-meta">
+          <span class="phase-number">04</span>
+          <h3 class="phase-title">Component Thinking & Visual Polish</h3>
+          <span class="phase-duration">Weeks 12–17</span>
+        </div>
+        <div class="phase-content">
+          <p class="phase-intro">Build reusable, accessible components that match the fidelity of your Figma designs. Learn how CSS can produce sophisticated visual effects — gradients, shadows, masks, transitions — and how to encode component states correctly.</p>
+
+          <div class="topics-grid">
+            <div class="topic-card">
+              <span class="topic-tag">Components</span>
+              <h4>Pseudo-classes & States</h4>
+              <p><code style="font-family: var(--font-mono); font-size: 0.8em;">:hover</code>, <code style="font-family: var(--font-mono); font-size: 0.8em;">:focus-visible</code>, <code style="font-family: var(--font-mono); font-size: 0.8em;">:active</code>, <code style="font-family: var(--font-mono); font-size: 0.8em;">:disabled</code>, <code style="font-family: var(--font-mono); font-size: 0.8em;">:checked</code>. Encoding interactive states directly in CSS without JavaScript.</p>
+              <span class="topic-figma-bridge">≈ Component interactive states</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Components</span>
+              <h4>CSS Transitions & Animations</h4>
+              <p>Smooth state changes using <code style="font-family: var(--font-mono); font-size: 0.8em;">transition</code>. Keyframe animations using <code style="font-family: var(--font-mono); font-size: 0.8em;">@keyframes</code>. Understanding easing functions and their emotional impact.</p>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Visual</span>
+              <h4>Advanced Gradients</h4>
+              <p>Linear, radial, conic gradients, and gradient meshes. How to replicate complex Figma backgrounds and subtle surface treatments in pure CSS.</p>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Visual</span>
+              <h4>Shadows & Elevation</h4>
+              <p>Box-shadow layers, drop-shadow filters, and inset shadows. Building a systematic elevation scale driven by tokens.</p>
+              <span class="topic-figma-bridge">≈ Figma drop shadows & elevation</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Visual</span>
+              <h4>Clip-path & Masks</h4>
+              <p>Creating non-rectangular shapes and revealing effects. <code style="font-family: var(--font-mono); font-size: 0.8em;">clip-path</code> for geometric shapes, <code style="font-family: var(--font-mono); font-size: 0.8em;">mask-image</code> for gradient fades.</p>
+              <span class="topic-figma-bridge">≈ Figma clipping masks</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Accessibility</span>
+              <h4>ARIA & Accessible Components</h4>
+              <p>When to use ARIA roles and attributes, focus management, keyboard navigation patterns, and colour contrast requirements (WCAG AA).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 5 -->
+      <div class="phase phase-color-5">
+        <div class="phase-meta">
+          <span class="phase-number">05</span>
+          <h3 class="phase-title">Modern CSS Superpowers</h3>
+          <span class="phase-duration">Weeks 18–24</span>
+        </div>
+        <div class="phase-content">
+          <p class="phase-intro">The final phase covers features that have landed in CSS in the last 2–3 years and are now broadly supported. These features blur the line between design tool capabilities and what CSS can natively express.</p>
+
+          <div class="topics-grid">
+            <div class="topic-card">
+              <span class="topic-tag">Modern CSS</span>
+              <h4>:has() — The Parent Selector</h4>
+              <p>Style a parent based on its children. Allows conditional styles that previously required JavaScript — a design system game-changer.</p>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Modern CSS</span>
+              <h4>CSS Nesting</h4>
+              <p>Native nesting without a preprocessor. Write component styles in a natural hierarchy that mirrors BEM structure without repetition.</p>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Modern CSS</span>
+              <h4>Scroll-Driven Animations</h4>
+              <p>Animations triggered and controlled by scroll position using pure CSS — no IntersectionObserver or scroll event listeners needed.</p>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Modern CSS</span>
+              <h4>View Transitions API</h4>
+              <p>Animate between page states or DOM changes with elegant cross-fade and shared element transitions. Brings Figma's Smart Animate to the web.</p>
+              <span class="topic-figma-bridge">≈ Smart Animate / Prototype transitions</span>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Modern CSS</span>
+              <h4>CSS @property</h4>
+              <p>Register custom properties with a type, initial value, and inheritance behaviour. Enables animating gradient stops and other previously impossible transitions.</p>
+            </div>
+            <div class="topic-card">
+              <span class="topic-tag">Workflow</span>
+              <h4>Design-to-Code Pipelines</h4>
+              <p>Figma Variables → Style Dictionary → CSS Custom Properties. Automating token extraction so your Figma file becomes the single source of truth.</p>
+              <span class="topic-figma-bridge">≈ Figma Variables → CSS automation</span>
+            </div>
+          </div>
+
+          <div class="code-example">
+            <div class="code-bar">
+              <div class="code-dots"><span></span><span></span><span></span></div>
+              <span class="code-filename">modern.css</span>
+            </div>
+            <pre><code><span class="code-comment">/* CSS Nesting — like SCSS but native */</span>
+<span class="code-selector">.card</span> <span class="code-punctuation">{</span>
+  <span class="code-property">background</span><span class="code-punctuation">:</span> <span class="code-token-name">var(--color-surface)</span><span class="code-punctuation">;</span>
+  <span class="code-property">border-radius</span><span class="code-punctuation">:</span> <span class="code-token-name">var(--radius-lg)</span><span class="code-punctuation">;</span>
+  <span class="code-property">transition</span><span class="code-punctuation">:</span> <span class="code-value">box-shadow 200ms ease</span><span class="code-punctuation">;</span>
+
+  <span class="code-selector">&:hover</span> <span class="code-punctuation">{</span>
+    <span class="code-property">box-shadow</span><span class="code-punctuation">:</span> <span class="code-token-name">var(--shadow-raised)</span><span class="code-punctuation">;</span>
+  <span class="code-punctuation">}</span>
+
+  <span class="code-comment">/* :has() — parent knows about its children */</span>
+  <span class="code-selector">&:has(img)</span> <span class="code-punctuation">{</span>
+    <span class="code-property">padding-block-start</span><span class="code-punctuation">:</span> <span class="code-value">0</span><span class="code-punctuation">;</span>
+  <span class="code-punctuation">}</span>
+<span class="code-punctuation">}</span>
+
+<span class="code-comment">/* View Transition — shared element across states */</span>
+<span class="code-selector">.project-thumbnail</span> <span class="code-punctuation">{</span>
+  <span class="code-property">view-transition-name</span><span class="code-punctuation">:</span> <span class="code-value">project-hero</span><span class="code-punctuation">;</span>
+<span class="code-punctuation">}</span></code></pre>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FIGMA BRIDGE SECTION -->
+<div class="bridge-section">
+  <div class="main-content" style="max-width: 1100px; margin: 0 auto;">
+    <h2 class="bridge-title">The Full Translation Guide</h2>
+    <p class="bridge-subtitle">Every major Figma workflow → its CSS equivalent</p>
+
+    <table class="bridge-table">
+      <thead>
+        <tr>
+          <th>Figma Workflow</th>
+          <th>CSS / HTML Equivalent</th>
+          <th>Key Property or Pattern</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Auto Layout spacing (gap between items)</td>
+          <td>Flexbox / Grid gap</td>
+          <td>gap: var(--space-4)</td>
+        </tr>
+        <tr>
+          <td>Padding on a Frame</td>
+          <td>CSS padding</td>
+          <td>padding: 1rem 1.5rem</td>
+        </tr>
+        <tr>
+          <td>Fill container width</td>
+          <td>flex-grow: 1 or width: 100%</td>
+          <td>flex: 1 1 auto</td>
+        </tr>
+        <tr>
+          <td>Hug contents width</td>
+          <td>width: fit-content</td>
+          <td>width: fit-content</td>
+        </tr>
+        <tr>
+          <td>Fixed frame size</td>
+          <td>explicit width/height</td>
+          <td>width: 320px; height: 200px</td>
+        </tr>
+        <tr>
+          <td>Corner radius</td>
+          <td>border-radius</td>
+          <td>border-radius: var(--radius-md)</td>
+        </tr>
+        <tr>
+          <td>Stroke / border</td>
+          <td>border or outline</td>
+          <td>border: 1px solid var(--color-border)</td>
+        </tr>
+        <tr>
+          <td>Figma Variables (all modes)</td>
+          <td>CSS Custom Properties with data attributes</td>
+          <td>[data-theme="dark"] { --color-bg: #000; }</td>
+        </tr>
+        <tr>
+          <td>Text styles</td>
+          <td>CSS font properties + custom properties</td>
+          <td>font-size: var(--text-lg); font-weight: 500</td>
+        </tr>
+        <tr>
+          <td>Opacity</td>
+          <td>opacity</td>
+          <td>opacity: 0.6</td>
+        </tr>
+        <tr>
+          <td>Blend mode (multiply, screen…)</td>
+          <td>mix-blend-mode</td>
+          <td>mix-blend-mode: multiply</td>
+        </tr>
+        <tr>
+          <td>Image fill on shape</td>
+          <td>background-image or object-fit on img</td>
+          <td>object-fit: cover; object-position: center</td>
+        </tr>
+        <tr>
+          <td>Overflow hidden</td>
+          <td>overflow: hidden</td>
+          <td>overflow: hidden</td>
+        </tr>
+        <tr>
+          <td>Interactive prototype → hover state</td>
+          <td>CSS :hover pseudo-class + transition</td>
+          <td>:hover { ... } + transition: all 0.2s</td>
+        </tr>
+        <tr>
+          <td>Smart Animate between screens</td>
+          <td>View Transitions API</td>
+          <td>view-transition-name: element-id</td>
+        </tr>
+        <tr>
+          <td>Component / Main component</td>
+          <td>CSS class (BEM Block)</td>
+          <td>.card { ... }</td>
+        </tr>
+        <tr>
+          <td>Component variant</td>
+          <td>BEM modifier or data attribute</td>
+          <td>.card--featured or [data-variant="featured"]</td>
+        </tr>
+        <tr>
+          <td>Boolean component prop</td>
+          <td>CSS :has() or data attribute</td>
+          <td>.card:has(.card__image) { ... }</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- RESOURCES -->
+<section style="background: var(--paper);">
+  <div class="main-content">
+    <div class="resources-section">
+      <h2 style="font-family: var(--font-display); font-size: 2rem;">Curated Resources</h2>
+      <p style="color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem;">High-quality, free learning materials organised by topic.</p>
+
+      <div class="resources-grid">
+        <div class="resource-card">
+          <div class="resource-type">Interactive Learning</div>
+          <h4><a href="https://flexboxfroggy.com" target="_blank">Flexbox Froggy</a></h4>
+          <p>Learn Flexbox by moving frogs onto lily pads. The fastest way to deeply understand Flexbox alignment.</p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-type">Interactive Learning</div>
+          <h4><a href="https://cssgridgarden.com" target="_blannk">Grid Garden</a></h4>
+          <p>The same concept applied to CSS Grid — water carrots by writing grid placement code.</p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-type">Reference</div>
+          <h4><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></h4>
+          <p>The authoritative CSS and HTML reference. Every property, with browser support tables and live examples.</p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-type">Deep Dives</div>
+          <h4><a href="https://www.joshwcomeau.com/css/" target="_blannk">Josh Comeau's CSS Blog</a></h4>
+          <p>Interactive, visual explanations of the most confusing CSS concepts. Written by a designer who codes. Start with his CSS for JavaScript Developers course.</p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-type"><a href="" target="_blannk">Modern CSS</a>></div>
+          <h4><a href="https://web.dev/learn/css/" target="_blank">web.dev / CSS Articles</a></h4>
+          <p>Google's developer platform has outstanding articles on Container Queries, :has(), Cascade Layers, and Scroll-Driven Animations.</p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-type">Typography</div>
+          <h4><a href="https://www.fluid-type-scale.com" target="_blannk">Fluid Type Scale Calculator</a></h4>
+          <p>Generate <code style="font-family: var(--font-mono); font-size: 0.85em;">clamp()</code> values for a full type scale visually, then paste directly into your token file.</p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-type">Design Tokens</div>
+          <h4><a href="https://styledictionary.com" target="_blannk">Style Dictionary</a></h4>
+          <p>The industry-standard tool for transforming JSON token files into CSS Custom Properties, matching your Figma Variables structure.</p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-type">Accessibility</div>
+          <h4><a href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blannk">WCAG Quick Reference</a></h4>
+          <p>Understand what AA compliance actually requires. Bookmark the colour contrast and focus indicator criteria — these come up constantly.</p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-type">Practice</div>
+          <h4><a href="" target="_blannk">Rebuild Your Own Figma Designs</a></h4>
+          <p>The single most effective practice method: take a Figma design you already understand deeply and build it in HTML + CSS without frameworks.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section style="background: var(--paper);">
+  <div class="main-content">
+    <div class="activities-section">
+      <h2 style="font-family: var(--font-display); font-size: 2rem;">Hands-On Activities</h2>
+      <p class="activities-intro">Each activity is designed to take 1–3 hours and produce something concrete you can show. They're tied to phases so you can practice as you learn — not all at the end.</p>
+
+      <div class="activity-list">
+
+        <div class="activity-item">
+          <span class="activity-index">01</span>
+          <div class="activity-body">
+            <h4>Name the Bones</h4>
+            <p>Open any website you admire in your browser. Using DevTools (right-click → Inspect), identify every semantic HTML element used for the main layout — nav, header, main, article, section, footer, aside. Then open a Figma file you've built and annotate each frame with the HTML element it should become.</p>
+            <div class="activity-deliverable">Annotated Figma file showing HTML element mapping</div>
+            <div class="activity-tags">
+              <span class="activity-tag">DevTools</span>
+              <span class="activity-tag">Semantics</span>
+              <span class="activity-tag">No code required</span>
+            </div>
+          </div>
+          <span class="activity-phase-badge badge-1">Phase 01</span>
+        </div>
+
+        <div class="activity-item">
+          <span class="activity-index">02</span>
+          <div class="activity-body">
+            <h4>Reverse-Engineer a Card</h4>
+            <p>Take a card component from your Figma library. Write the HTML structure first (just the tags, no CSS). Then, layer by layer, translate each Figma property into a CSS declaration — padding from Auto Layout spacing, border-radius from corner radius, colour from your Variables. Don't use any framework. Paste it into CodePen and compare it to your Figma design.</p>
+            <div class="activity-deliverable">A working card on CodePen that matches your Figma design</div>
+            <div class="activity-tags">
+              <span class="activity-tag">HTML</span>
+              <span class="activity-tag">CSS</span>
+              <span class="activity-tag">CodePen</span>
+            </div>
+          </div>
+          <span class="activity-phase-badge badge-1">Phase 01</span>
+        </div>
+
+        <div class="activity-item">
+          <span class="activity-index">03</span>
+          <div class="activity-body">
+            <h4>Auto Layout to Flexbox Sprint</h4>
+            <p>Take three different Auto Layout frames from your Figma work — one horizontal, one vertical, one nested. For each one, write the equivalent CSS using only Flexbox. Focus on matching the gap, alignment, and sizing behaviour exactly. Then try switching one to CSS Grid and notice where Grid feels more natural.</p>
+            <div class="activity-deliverable">Three CodePen pens, each matching a Figma Auto Layout frame</div>
+            <div class="activity-tags">
+              <span class="activity-tag">Flexbox</span>
+              <span class="activity-tag">Grid</span>
+              <span class="activity-tag">Layout</span>
+            </div>
+          </div>
+          <span class="activity-phase-badge badge-2">Phase 02</span>
+        </div>
+
+        <div class="activity-item">
+          <span class="activity-index">04</span>
+          <div class="activity-body">
+            <h4>Build Your Own Token File</h4>
+            <p>Export or manually copy your Figma Variable values into a <code style="font-family: var(--font-mono); font-size: 0.85em;">tokens.css</code> file, organised into three layers: primitives (raw values), semantic (purpose-named), and component tokens. Then implement a light and dark mode by switching semantic tokens under a <code style="font-family: var(--font-mono); font-size: 0.85em;">[data-theme]</code> attribute. Add a toggle button that flips the theme with one line of JavaScript.</p>
+            <div class="activity-deliverable">A tokens.css file + a theme-toggling demo page</div>
+            <div class="activity-tags">
+              <span class="activity-tag">Design Tokens</span>
+              <span class="activity-tag">Custom Properties</span>
+              <span class="activity-tag">Theming</span>
+            </div>
+          </div>
+          <span class="activity-phase-badge badge-3">Phase 03</span>
+        </div>
+
+        <div class="activity-item">
+          <span class="activity-index">05</span>
+          <div class="activity-body">
+            <h4>Rebuild a Figma Component with Full States</h4>
+            <p>Pick a component from your library that has multiple variants and interactive states — a button with default, hover, focus, and disabled; or a form input with idle, focused, and error states. Write the full HTML and CSS for every state. Use only pseudo-classes (<code style="font-family: var(--font-mono); font-size: 0.85em;">:hover</code>, <code style="font-family: var(--font-mono); font-size: 0.85em;">:focus-visible</code>, <code style="font-family: var(--font-mono); font-size: 0.85em;">:disabled</code>) — no JavaScript. Then test it with a keyboard-only navigation pass.</p>
+            <div class="activity-deliverable">A fully interactive component with all states, keyboard-accessible</div>
+            <div class="activity-tags">
+              <span class="activity-tag">Pseudo-classes</span>
+              <span class="activity-tag">Accessibility</span>
+              <span class="activity-tag">BEM</span>
+            </div>
+          </div>
+          <span class="activity-phase-badge badge-4">Phase 04</span>
+        </div>
+
+        <div class="activity-item">
+          <span class="activity-index">06</span>
+          <div class="activity-body">
+            <h4>Animate a Prototype Transition</h4>
+            <p>Take a Figma prototype flow you've built — ideally a list item expanding to a detail view, or a card navigating to a full page. Recreate the transition using the View Transitions API. Assign a <code style="font-family: var(--font-mono); font-size: 0.85em;">view-transition-name</code> to the shared element and trigger the transition with a small JavaScript click handler. Compare the feel to Smart Animate.</p>
+            <div class="activity-deliverable">A two-state HTML page with a smooth shared-element transition</div>
+            <div class="activity-tags">
+              <span class="activity-tag">View Transitions</span>
+              <span class="activity-tag">Modern CSS</span>
+              <span class="activity-tag">Animation</span>
+            </div>
+          </div>
+          <span class="activity-phase-badge badge-5">Phase 05</span>
+        </div>
+
+        <div class="activity-item">
+          <span class="activity-index">07</span>
+          <div class="activity-body">
+            <h4>Portfolio Page from Scratch</h4>
+            <p>Build a single HTML page — your own portfolio landing page or a case study — entirely from scratch. No frameworks, no templates. Apply everything from all five phases: semantic HTML, CSS Grid for layout, your own token file, BEM components, responsive design with container queries, and at least one CSS animation. This is your capstone.</p>
+            <div class="activity-deliverable">A live, deployed HTML + CSS portfolio page</div>
+            <div class="activity-tags">
+              <span class="activity-tag">Capstone</span>
+              <span class="activity-tag">All Phases</span>
+              <span class="activity-tag">Deployment</span>
+            </div>
+          </div>
+          <span class="activity-phase-badge badge-5">Capstone</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRESS OVERVIEW -->
+<section style="background: var(--cream);">
+  <div class="main-content">
+    <div class="progress-section">
+      <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 0.5rem;">The Complete Arc</h2>
+      <p style="color: var(--muted); font-size: 0.9rem;">A 3–6 month journey depending on your pace and prior web exposure.</p>
+
+      <div class="progress-visual">
+        <div class="progress-phase">
+          <span class="progress-phase-num">01</span>
+          <div class="progress-phase-name">Web Foundations</div>
+          <div class="progress-phase-time">3 weeks</div>
+        </div>
+        <div class="progress-phase">
+          <span class="progress-phase-num">02</span>
+          <div class="progress-phase-name">Layout Mastery</div>
+          <div class="progress-phase-time">4 weeks</div>
+        </div>
+        <div class="progress-phase">
+          <span class="progress-phase-num">03</span>
+          <div class="progress-phase-name">Tokens & Architecture</div>
+          <div class="progress-phase-time">4 weeks</div>
+        </div>
+        <div class="progress-phase">
+          <span class="progress-phase-num">04</span>
+          <div class="progress-phase-name">Component Polish</div>
+          <div class="progress-phase-time">6 weeks</div>
+        </div>
+        <div class="progress-phase">
+          <span class="progress-phase-num">05</span>
+          <div class="progress-phase-name">Modern CSS</div>
+          <div class="progress-phase-time">7 weeks</div>
+        </div>
+      </div>
+
+      <p style="margin-top: 2rem; color: var(--muted); font-size: 0.875rem; max-width: 680px; line-height: 1.7;">The best milestone for measuring readiness to move forward: take a component from your own Figma file and rebuild it in HTML + CSS after each phase. If it matches your design, you're ready. The goal is always to <em>read</em> code comfortably and <em>write</em> CSS confidently — not to be a full-stack engineer.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Designer's HTML + CSS Learning Path &nbsp;·&nbsp; Built for Figma-fluent minds</span>
+</footer>
+
+</body>
+</html>
